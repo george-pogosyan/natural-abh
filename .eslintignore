@@ -1,0 +1,6 @@
+.cache
+build
+**/node_modules/**
+*.js
+*.spec.ts
+tests

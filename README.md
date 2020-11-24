@@ -1,0 +1,1 @@
+![Tests](https://github.com/asar-studio/natural-abh/workflows/Tests/badge.svg?branch=develop)

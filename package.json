@@ -1,0 +1,83 @@
+{
+  "name": "natural-abh",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint --ext .ts, --ignore-path .eslintignore .",
+    "lintfix": "eslint --fix --ext .ts, --ignore-path .eslintignore .",
+    "test": "jest",
+    "test:watch": "jest --watch --detectOpenHandles"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint — fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "typescript": "^4.1.0",
+    "underscore": "^1.12.0"
+  },
+  "devDependencies": {
+    "@jest/types": "^26.6.2",
+    "@types/node": "^14.14.9",
+    "@types/underscore": "^1.10.24",
+    "@typescript-eslint/eslint-plugin": "^4.8.2",
+    "eslint": "^7.13.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.1",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.4",
+    "ts-node": "^9.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/*.(test|spec).ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": true,
+        "tsconfig": "jest.tsconfig.json"
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "text-summary"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asar-studio/natural-abh.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asar-studio/natural-abh/issues"
+  },
+  "homepage": "https://github.com/asar-studio/natural-abh#readme"
+}

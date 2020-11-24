@@ -1,0 +1,30 @@
+{
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["prettier", "airbnb-typescript/base"],
+  "plugins": ["prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "rules": {
+    "prettier/prettier": "warn",
+    "import/prefer-default-export": "off",
+    "no-restricted-syntax": "off",
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": ["off"],
+    "implicit-arrow-linebreak": "off",
+    "indent": "off",
+    "@typescript-eslint/indent": ["off"],
+    "no-trailing-spaces": "off",
+    "object-curly-newline": ["off"],
+    "guard-for-in": "off",
+    "no-plusplus": "off"
+  }
+}
