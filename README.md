@@ -1,1 +1,1 @@
-![Tests](https://github.com/asar-studio/natural-abh/workflows/Tests/badge.svg?branch=develop)
+![Tests](https://github.com/asar-studio/natural-abh/workflows/Tests/badge.svg?branch=develop)    ![Release Package to npm](https://github.com/asar-studio/natural-abh/workflows/Release%20Package%20to%20npm/badge.svg)
