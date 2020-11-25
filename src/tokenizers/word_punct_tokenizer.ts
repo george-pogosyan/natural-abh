@@ -8,6 +8,11 @@ interface Options {
 
 export class WordPunctTokenizer extends RegexpTokenizer {
   constructor(options: Options) {
-    super({ ...options, pattern: new RegExp(/(|.|!|\?|'|"|:|;|,|-)/i) });
+    super({
+      ...options,
+      pattern: new RegExp(
+        /([АБВГӶҔДЏЕҼҾЖЗӠИКҚҞЛМНОҨПԤҦРСТҬУФХҲЦҴЧҶШЫЬӘабвгӷҕдџеҽҿжзӡикқҟлмноҩпԥҧрстҭуфхҳцҵчҷшыьә]+|[0-9._]+|.|!|\?|'|"|:|;|,|-)/i
+      )
+    });
   }
 }
