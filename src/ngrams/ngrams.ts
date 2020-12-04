@@ -1,12 +1,7 @@
 import * as _ from 'underscore';
 import { AggressiveTokenizer as Tokenizer } from '../tokenizers/aggressive_tokenizer';
 
-let tokenizer = new Tokenizer();
-
-export const setTokenizer = (t: Tokenizer) => {
-  if (!_.isFunction(t.tokenize)) throw new Error('Expected a valid Tokenizer');
-  tokenizer = t;
-};
+const tokenizer = new Tokenizer();
 
 export const ngrams = (
   _sequence: string,

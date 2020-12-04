@@ -9,23 +9,18 @@ interface Options {
 
 // Base Class for RegExp Matching
 export class RegexpTokenizer extends Tokenizer {
-  private pattern: RegExp;
+  public pattern: RegExp;
 
-  private discardEmpty: boolean;
+  public discardEmpty: boolean;
 
-  private gaps: boolean | undefined;
+  public gaps: boolean | undefined;
 
   constructor(options: Options = {}) {
     super();
-    this.pattern = options.pattern || this.pattern;
-    this.discardEmpty = options.discardEmpty || true;
-
+    this.pattern = options.pattern ?? this.pattern;
+    this.discardEmpty = options.discardEmpty ?? true;
     // Match and split on GAPS not the actual WORDS
-    this.gaps = options.gaps;
-
-    if (this.gaps === undefined) {
-      this.gaps = true;
-    }
+    this.gaps = options.gaps ?? true;
   }
 
   public tokenize = (s: string): string[] => {
