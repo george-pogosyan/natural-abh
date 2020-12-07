@@ -2,9 +2,9 @@
 
 =======
 
-[![NPM version](https://img.shields.io/npm/v/natural-abh.svg)](https://www.npmjs.com/package/natural-abh)
 ![Tests](https://github.com/asar-studio/natural-abh/workflows/Tests/badge.svg?branch=develop)
 ![Release Package to npm](https://github.com/asar-studio/natural-abh/workflows/Release%20Package%20to%20npm/badge.svg)
+[![NPM version](https://img.shields.io/npm/v/natural-abh.svg)](https://www.npmjs.com/package/natural-abh)
 
 "natural-abh" is a general natural language facility for nodejs. В настоящее время поддерживается: Tokenizing, normalizing and N-grams are currently supported.
 
@@ -89,3 +89,6 @@ console.log(trigrams('Аҧсны Аҳәынҭқарра Ашьаустә зак�
 console.log(ngrams('Аҧсны Аҳәынҭқарра Ашьаустә закәанеидкыла', 3));
 // [ [ 'Аҧсны', 'Аҳәынҭқарра', 'Ашьаустә' ], [ 'Аҳәынҭқарра', 'Ашьаустә', 'закәанеидкыла' ] ]
 ```
+
+More use cases u can find reading tests
+
