@@ -58,7 +58,7 @@ console.log(tokenizer.tokenize('Аԥсны Аҳәынҭқарра Ашьауст
 
 ## Нормалайзер
 
-TODO описание:
+Заменяет устаревшие символы в строке на современные аналоги:
 
 ```javascript
 const { normalize } = require('natural-abh');

@@ -58,7 +58,7 @@ console.log(tokenizer.tokenize('Аԥсны Аҳәынҭқарра Ашьауст
 
 ## Normalizer
 
-TODO description:
+Replaces obsolete characters in a string with modern counterparts:
 
 ```javascript
 const { normalize } = require('natural-abh');
