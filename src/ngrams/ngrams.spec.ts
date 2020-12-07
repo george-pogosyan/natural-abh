@@ -5,7 +5,7 @@ import {
   bigrams,
   trigrams,
   multrigrams
-} from '../../src/ngrams/ngrams';
+} from './ngrams';
 
 const text = readFileSync(process.cwd() + '/tests/data/text.txt', 'utf8');
 const unogramsJSON = JSON.parse(

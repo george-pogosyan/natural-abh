@@ -2,36 +2,36 @@
 
 =======
 
+[![NPM version](https://img.shields.io/npm/v/natural-abh.svg)](https://www.npmjs.com/package/natural-abh)
 ![Tests](https://github.com/asar-studio/natural-abh/workflows/Tests/badge.svg?branch=develop)
 ![Release Package to npm](https://github.com/asar-studio/natural-abh/workflows/Release%20Package%20to%20npm/badge.svg)
-[![NPM version](https://img.shields.io/npm/v/natural-abh.svg)](https://www.npmjs.com/package/natural-abh)
 
-"natural-abh" is a general natural language facility for nodejs. В настоящее время поддерживается: Tokenizing, normalizing and N-grams are currently supported.
+"Natural" is a general natural language facility for nodejs. В настоящее время поддерживается: токенизация, нормализация, подсчёт N-грамм(биграммы, триграммы и мультиграммы).
 
-It's still in the early stages, so we're very interested in bug reports, contributions and the like.
+Библиотека все еще на начальной стадии, поэтому мы очень заинтересованы в сообщениях об ошибках, помощь в реализации функционала и тд.
 
-### TABLE OF CONTENTS
+### Содержание
 
-- [Installation](#installation)
-- [Tokenizers](#tokenizers)
-- [Normalizer](#normalizer)
-- [N-Grams](#n-grams)
+- [Установка](#установка)
+- [Токенизатор](#токенизатор)
+- [Нормалайзер](#нормалайзер)
+- [N-граммы](#n-граммы)
 
-## Installation
+## Установка
 
-You can install natural-abh via NPM like so:
+Вы можете установить natural-abh через NPM следующим образом:
 
     npm install natural-abh
 
-or using yarn:
+Либо используя yarn:
 
     yarn add natural-abh
 
-If you're interested in contributing to natural, or just hacking on it, then by all means fork away!
+Если вы заинтересованы в том, чтобы внести свой вклад в natural-abh, создайте fork репозитория, добавьте свой функционал и создайте pull request для обсуждения!
 
-## Tokenizers
+## Токенизатор
 
-Word anf RegExp are provided for breaking text up into arrays of tokens:
+Word и RegExp токенизаторы предназначены для разбиения текста на массивы токенов:
 
 ```javascript
 const nabh = require('natural-abh');
@@ -40,7 +40,7 @@ console.log(nabh.tokenize('Аԥсны Аҳәынҭқарра Ашьаустә з
 // [ 'Аԥсны', 'Аҳәынҭқарра', 'Ашьаустә', 'закәанеидкыла' ]
 ```
 
-The other tokenizers follow a similar pattern:
+Остальные токенизаторы следуют аналогичной схеме:
 
 ```javascript
 tokenizer = new nabh.AggressiveTokenizer();
@@ -56,9 +56,9 @@ console.log(tokenizer.tokenize('Аԥсны Аҳәынҭқарра Ашьауст
 // [ 'Аԥсны', 'Аҳәынҭқарра', 'Ашьаустә', 'закәанеидкыла' ]
 ```
 
-## Normalizer
+## Нормалайзер
 
-Replaces obsolete characters in a string with modern counterparts:
+Заменяет устаревшие символы в строке на современные аналоги:
 
 ```javascript
 const { normalize } = require('natural-abh');
@@ -66,9 +66,9 @@ console.log(normalize('Аҧсны Аҳәынҭқарра Ашьаустә зак
 // "Аԥсны Аҳәынҭқарра Ашьаустә закәанеидкыла"
 ```
 
-## N-Grams
+## N-граммы
 
-n-grams can be obtained for strings (which will be tokenized for you):
+быдут получены для строк (которые будут токенизированы для вас):
 
 ```javascript
 const { bigrams, trigrams, ngrams } = nabh;
@@ -90,5 +90,5 @@ console.log(ngrams('Аҧсны Аҳәынҭқарра Ашьаустә закә�
 // [ [ 'Аҧсны', 'Аҳәынҭқарра', 'Ашьаустә' ], [ 'Аҳәынҭқарра', 'Ашьаустә', 'закәанеидкыла' ] ]
 ```
 
-More use cases u can find reading tests
 
+Более детально ознакомиться с использованием библиотеки вы можете ознакомиться посмотрев тесты
